@@ -1,0 +1,142 @@
+<template>
+  <view class="page-container">
+    <u-navbar
+      :title="title"
+      :safeAreaInsetTop="true"
+      :placeholder="true"
+      :fixed="true"
+      :border="false"
+      :bgColor="bgColor"
+      titleStyle="color: #fff;"
+      leftIconColor="#fff"
+      :zIndex="9999"
+    >
+      <template #left>
+        <view @click="goBack">
+          <u-icon name="arrow-left" size="20"></u-icon>
+        </view>
+      </template>
+    </u-navbar>
+
+	<web-view
+	  ref="webview"
+	  class="web-view-content"
+	  :webview-styles="webviewStyles"
+	  :src="weburl"
+	/>
+	
+	<view v-if="loading" class="loading-mask">
+	  <text>加载中...</text>
+	</view>
+  </view>
+</template>
+
+<script setup>
+import { onLoad, onUnload, onBackPress } from "@dcloudio/uni-app";
+import { ref } from "vue";
+
+const webview = ref(null);
+const title = ref("");
+const bgColor = ref("#007AFF");
+const type = ref("");
+const weburl = ref("");
+const loading = ref(true);
+const isClosed = ref(false);
+const webviewStyles = {
+  progress: {
+    color: "#007AFF"
+  }
+};
+
+onLoad(e => {
+  title.value = e.title || "支付";
+  if (e.url) {
+    weburl.value = decodeURIComponent(e.url);
+  } else {
+    loading.value = false;
+  }
+});
+
+onUnload(() => {
+  uni.$emit("payfinish", "closed");
+  console.log(isClosed.value);
+  console.log("页面已关闭/卸载");
+});
+
+function onPostMessage(event) {
+  console.log("实时收到消息:", event.detail);
+
+  let data = event.detail;
+  if (event.detail.data && Array.isArray(event.detail.data)) {
+    data = event.detail.data[0];
+  } else if (event.detail.data) {
+    data = event.detail.data;
+  }
+
+  if (!data || !data.action) return;
+  if (isClosed.value) return;
+  isClosed.value = true;
+
+  if (data.action === "close") {
+    uni.navigateBack();
+  }
+
+  if (data.action === "toReturn") {
+    console.log("H5 通知支付成功");
+    // eventBus.$emit("payfinish", data.result || "success");
+	uni.$emit("payfinish", "closed");
+    uni.navigateBack();
+  }
+}
+
+function goBack() {
+  uni.navigateBack();
+}
+
+function onLoadSuccess(e) {
+  console.log("WebView加载成功:", e);
+  loading.value = false;
+}
+
+function onLoadError(e) {
+  console.error("WebView加载失败:", e);
+  loading.value = false;
+}
+
+function onMessage(event) {
+  console.log("收到WebView消息:", event);
+}
+
+onBackPress(() => {
+  if (webview.value && webview.value.canGoBack) {
+    const canGoBack = webview.value.canGoBack();
+    if (canGoBack) {
+      webview.value.goBack();
+      return true;
+    }
+  }
+  return false;
+});
+</script>
+
+<style scoped>
+.page-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.loading-wrap {
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+.web-view-content {
+  flex: 1;
+}
+</style>

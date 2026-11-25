@@ -1,0 +1,4696 @@
+{
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/home/newHome",
+				"text": "首页",
+				"iconPath": "/static/tabbar/home_default.png",
+				"selectedIconPath": "/static/tabbar/home_selected.png"
+			},
+			// {
+			//   "pagePath": "pages/Integral/integral",
+			//   "text": "积分",
+			//   "iconPath": "/static/tabbar/service_default.png",
+			//   "selectedIconPath": "/static/tabbar/service_selected.png"
+			// },
+			{
+				"pagePath": "pages/service/service",
+				"text": "服务",
+				"iconPath": "/static/tabbar/service_default.png",
+				"selectedIconPath": "/static/tabbar/service_selected.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "我的",
+				"iconPath": "/static/tabbar/my_default.png",
+				"selectedIconPath": "/static/tabbar/my_selected.png"
+			}
+		]
+	},
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"backgroundColor": "#f5f7fa"
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {}
+		},
+		{
+			"path": "pages/Integral/integral",
+			"style": {}
+		},
+		{
+			"path": "pages/Integral/confirmOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/Integral/orderPayHtml",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/login/forgetPassword",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/login/quickRegister",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {}
+		},
+		{
+			"path": "pages/service/service",
+			"style": {}
+		},
+		{
+			"path": "pages/service/changeMainHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+
+		{
+			"path": "pages/mine/setting/SettingPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/setting/SelectComPanyAndBookPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/setting/AboutAppPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+
+		{
+			"path": "pages/mine/setting/ChangePasswordPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/setting/BindPhonePage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/setting/myEquipment",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/setting/MyKeFuService",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myInformation/myInfo",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/jianguanAcount/erWeiMa",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/jianguanAcount/jianguanAcount",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/jianguanAcount/myVollet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/IntegralWorkPointsPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/PartyFirstPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/PartyActivityList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/PartyActivityDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/OtherPartyActList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/MySetUpPartyDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/PartyMemberManage",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/PartyProgressManage",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/PartyProgressManDet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/MyJoinPartyDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/MyJoinProgressList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/PartyAddProgress",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/SetUpMoreProjectList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/AddPartyProject",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyProject/JoinMoreProjectList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/DangWuCenter",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/JoinTheParty",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/JoinDangShenQing",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/RelationshipGetIn",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/RelationShipOut",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyPersonNeed",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/partyPersonClass",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/moreClassLessons",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/lessonsDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/WangGe",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/messageRegistList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/AddMessageRegist",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/chexkMessage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/AddMembers",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/addMainHouseKeeper",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/gridEvent",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/eventsTailafter",
+			"style": {}
+		},
+		{
+			"path": "pages/home/eventsDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/Eventshandle",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/helpEachOther",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/helpEachOtherDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicDiscuss",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/tousuJianYi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/tousujianyiHistory",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/tousujianyiDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/LoveBank",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/juanZengTuiJian",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/myIntegral/InInvoiceListPage",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/myIntegral/IntegralCity",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/linggongGongFen",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/myIntegralPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/myWorkPointList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/myWorkPointPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/pointConfirmOrderPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/PointOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/pointProductDetailPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/pointProductListPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/WorkPointAddAddress",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myIntegral/selectWorkPointAddress",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/addressManagement/addressManageMent",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/addressManagement/addAddress",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/addressManagement/EditAddress",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/yijianZhengJi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/yijianZhengJiNotes",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/yijianZhengjiDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/yijianGongShi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/yijianGongShiList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/yijianGongShiDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/yijianHuiZong",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/MyHelp",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/MyHelpDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/MySignPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/MyStudy",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/MyStudyDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/BiaoBingPaiHang",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/integralPaiHang",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/jaunzengPaiHang",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanminDengJi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanminDengJiNotes",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanminDengJiDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/checkXuanMinDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanminGongShi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/addXuanMin",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/checkXuanminInfo",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanminGongShiNotes",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanminGongShiDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/faqiXuanJu",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanjuAddXuanMin",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanjuNotes",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanjuJieGuo",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanjuGongShi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanjuGongShiNotelist",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/xuanjuGongShiDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/gotoVote",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/gotoVoteList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/gotoVoteDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/voteGongShi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/voteGongShiNoteList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/PartyQY/publicJustice/voteGongShiNoteDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/hotelAndhomestay",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/mapLocation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/checkHotels",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/detailhotel",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/aiBookHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/aihotelDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/viewsDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/weather",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/IntroductionGuide",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/bookingHomestay",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/payBookingHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/hotelProtocal",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/priceOrderHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/bookingOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/morepolicy",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/houseType",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/homestayPolicy",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/gourmetCircle",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/checkShops",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/mainshopDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/viewstickets",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/moreview",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/emergencyEvents",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/shunfengCar",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/everydaydiscount",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/discountHotelDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/bookingHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/homestayHouseType",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/homeMessage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/messagePush/workOrderPushDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/messagePush/CompanyOrderSalaryPay",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/messagePush/PingTaiEmerGencyJieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/messagePush/PingTaiEmerGencyWorker",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/messagePush/PingTaiHisDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/messagePush/SendPartTimeOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/messagePush/SendWorkerJieSuanDone",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/messagePush/ShopSaleOutInfo",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/messagePush/YuFuPayShenHeDet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/yuyueOrder/orderList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/yuyueOrder/parkingReservation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/yuyueOrder/afterSale",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/circleOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/circleOrder/myBusinessCircle",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/circleOrder/cnacelMoneyBack",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/circleOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/OrderPingJia",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/saleBehindOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/platCutInOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/circleYuGouOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/circleOrder/circleYuGouOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/circleDaiFuOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/circleOrder/circleDaiFuOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/circleGongCaiOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/circleOrder/circleGongCaiOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/cityOrder/cityOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/cityOrder/cityAfterSale",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/cityOrder/cityOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/integralOrder/integralOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/integralOrder/integralOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/emergencyOrder/emergencyOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/emergencyOrder/emergencyGrabDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/emergencyOrder/emergencyOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/emergencyOrder/ThirdPartTimeInput",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/orderManagement/aiOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/orderManagement/aiOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/orderManagement/cancelHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/orderManagement/continueHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/orderManagement/orderAddPrice",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/orderManagement/orderChangeHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/orderManagement/submithouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myCollection/myCollection",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myReceivement/myReceiveMent",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myReceivement/myRoberry",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myReceivement/myTakeOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/mySentOut/mySentOutList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/mySentOut/postDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/mySentOut/unnormalList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myOutWay/myOutWay",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myOutWay/wayoutDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myshare/myShare",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/myHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/houseDetails",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/houseHistory",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/myHouse/houseHistoryDet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/addHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/addHouseHistory",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/addhouseHisDet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/AddHouseInfo",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/AddHouseInfoSecond",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/SignPage/SignPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/SignPage/SignatureComponent",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/financialList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/zhuanzhangService",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/backToVollet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/zhuanzhangNotes",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/financialService/zhuanzhangNotesDet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/backMoneyService",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/financialService/backMoneySerDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/piliangJieSuanTuiKuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/jiesuaqnSalaty",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/financialService/salaryPayDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/salaryPayNoShenDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/salaryPayPaiDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/salaryPayPaiNoShenDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/salaryPayPaiWaitJieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/salaryPayWaitingJieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/PartTimeSieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/PartTimePiLiangJieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/PartTimeWaitingJieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/DayJobPartTimeOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/PiLiangOrderList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/PiLiangOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/jiesuanShenHe",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/financialService/linggongSHDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/PaigongSHDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/CancelMoneyShenDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/TransMoneyShenDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/piliangJieSuanSH",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/partTimeJieSuanSHDet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/qingkuanBaoXiao",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/financialService/qingkuanBXDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/askDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/detailReview",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/historyDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/jiaonaHistory",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/volletZhaungZhang",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApplyPage/LoanApplyPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApplyPage/kuaiJiShenPi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApplyPage/kuanXiangShenQing",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApplyPage/KuaijiApplyDetailPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApplyPage/KuaijiApplyHistoryPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApplyPage/LoanApplyDetailPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApplyPage/LoanApplyHistoryPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApplyPage/MingXiPreviewPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApprovePage/LoanApprovePage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApprovePage/fragpage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApprovePage/LoanApproveDetailPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/MoneyPayPage/MoneyPayPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/MoneyPayPage/MoneyPayHistoryPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/MoneyPayPage/MoneyPayDetailPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/OaContactChoosePage/OaContactChoosePage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LoanApplyCreatComPage/LoanApplyCreatComPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/companyInservice",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/normalShenQing",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/normalShenPi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/historyList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/companyInservice/historySPDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/fileShenQingDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/qingjiaShenQingDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/QingKuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/chooseShenPiPerson",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/chooseCHaoSongPerson",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/BackMoney",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/BaoXiao",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/ShenQing",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/QingJia",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/RiBao",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/companyInservice/AddRiBao",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/chooseJieShouPeople",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/transferMation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/selectPerson",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/RiBaiMySetDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/RiBaoMyTransferDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/RiBaoTransferMeDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/qingjiaType",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/gotoElect/myelection",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/gotoElect/myElectionDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/gotoVote/gotovote",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/gotoVote/gotovoteDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/gotoVote/myVote",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/gotoVote/myvoteDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/buyHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/buyHouseDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/buyShopDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/hmeaageDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/housedetailMessage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/houseInformation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/idConfirm",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/jubaoHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/myMessage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/myPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/myPageReview",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/ProtocalDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/rentHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/rentHouseLocation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PublicEvents/publicEvents",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PublicEvents/filesSign",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PublicEvents/filesignhistory",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PublicEvents/fileSearch",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/PublicEvents/filesRecieve",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/PublicEvents/fileselectperson",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/PublicEvents/filetransfer",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/PublicEvents/filesigndetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/PublicEvents/filedetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/linggongOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/linggongMessage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/linggonguseWorkerOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/linggongTalkOrderList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/linggongTalkOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/webProtocal",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/chooseWork",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/myProtocal",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/myProtocalDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/MyConversation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/linggongGoToPay",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/linggongGoPingJia",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/linggongCheckDaKaList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/secondSignOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/daijiesaunOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/unused/unusedhome",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BusinessCustomerHome",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unused/IntegralAddAddressPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unused/IntegralSelectAddressPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unused/searchpage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unused/searchresultpage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unused/sendexchangepage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unused/sendrecyclerpage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unused/exchangeproductdetailpage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unused/recyclerproductdetailpage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unused/recyclerconfirmorder",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemybuy/aftersalepage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemybuy/mybuyorder",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemybuy/recyclerbuyorderinfo",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemycollect/mycollection",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemyexchange/contactme",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemyexchange/exchangelistingpage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemyexchange/exchangeunlistingpage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemyexchange/mycontacts",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemysendrecycler/aftersalepage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemysendrecycler/mylistingpage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemysendrecycler/myunlistingpage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemysendrecycler/mysendrecycler",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemysendrecycler/wuliuDetailinfo",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemysendrecycler/fahuo",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/unusemysendrecycler/recyclerMySendorderinfo",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/falnyuanzhu",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/laymyapplylist",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawmyagreement",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawmyzixun",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawmyliuyan",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawshiwusuo",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawgongyijigou",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/fufeizixun",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/liuyan",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawshixiangqing",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/gongxiangyonggong",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/qiyeyonggongdetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/qiyepaigongdetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/laowujianzhidetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/yonggonggongxiangdetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/paigonggongxiangdetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/jinengpeixun",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/compaixun",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/perpeixun",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/laowupaiqian",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/rencaizhaopin",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/threetablist",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/twotablist",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/wugongdengji",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/selectAddress",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/yonggongdengji",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/yonggongdengjilist",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/zhengcezixun",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/zhengcezixundetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/ChatAgreement1",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/ChatAgreement2",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/ChatAgreement3",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/ChatAgreement4",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/ChatAgreement5",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/ChatAgreement6",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/ChatAgreementsixList",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/yonggongdengjiwangqianxieyi",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/registupdateworker",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/CChatPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/fabuqiuzhi",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/fabuzhaopin",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/wugongdengjilist",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/wugongdengjidaitian",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/minelaw",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawserviceorder",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawagreementmanage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/liuyandetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/liuyandetaillaw",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawfreeagreement",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawcommissionagreement",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/personapplyhelp",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/companyapplyhelp",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/personapplydetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/companyapplydetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawmyagreementdetail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/work/lawservicefeedback",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/dakaSetting",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/laowuOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/laowuTalkOrderList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/laowuJieSuanNoteList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/laowuDaKa",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/reLocation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/laowuDaKaList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/bukaSetting",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/zhaopinDengJi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/zhaopinPass",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/zhaopinDengJiDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/shareLaoWu",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/laowuOrderList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/thirdJianZhiMessage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/sheyuanOrderList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/sheyuanOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/waipaiOrderList",
+			"style": {}
+		},
+		{
+			"path": "pages/service/associaList",
+			"style": {
+				"navigationBarTitleText": "社群",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/association",
+			"style": {
+				"navigationBarTitleText": "社群",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/notice",
+			"style": {
+				"navigationBarTitleText": "通知公告",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/noticeDetail",
+			"style": {
+				"navigationBarTitleText": "通知详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/policyDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/WebViewPage",
+			"style": {
+				"navigationBarTitleText": "网页",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/zhuazhaiDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/rentshopDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/HouseInformation/sentHouseInfo",
+			"style": {
+				"navigationBarTitleText": "填写租户信息",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/confirmQianFei",
+			"style": {
+				"navigationBarTitleText": "确认订单",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/feeDetails",
+			"style": {
+				"navigationBarTitleText": "明细",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/houseMoneyDetail",
+			"style": {
+				"navigationBarTitleText": "房租缴纳",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/houseRentPay",
+			"style": {
+				"navigationBarTitleText": "付款",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/houseRentPayHis",
+			"style": {
+				"navigationBarTitleText": "历史记录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/JiaoFeePayPage",
+			"style": {
+				"navigationBarTitleText": "缴费",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/JiaoFeiOterDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/paythefees",
+			"style": {
+				"navigationBarTitleText": "缴费服务",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/tuikuanDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/yuchong",
+			"style": {
+				"navigationBarTitleText": "预缴",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/yuchongDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/jiaofei/yuchongKouKuanDet",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/opinioncollection/choosenDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/opinioncollection/inputDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/opinioncollection/myOpinioncollection",
+			"style": {
+				"navigationBarTitleText": "我的征集",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/opinioncollection/myOpinionDetail",
+			"style": {
+				"navigationBarTitleText": "我的征集详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/opinioncollection/opinionCollection",
+			"style": {
+				"navigationBarTitleText": "意见征集",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/opinionsolicitation/opinionSolicitation",
+			"style": {
+				"navigationBarTitleText": "意见公示",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/opinionsolicitation/solicitationChoseDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/opinionsolicitation/solicitationInputDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/pingtaiCheck/pingtaiCheck",
+			"style": {
+				"navigationBarTitleText": "平台报修",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/pingtaiCheck/projectDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/pingtaiCheck/projectOrderList",
+			"style": {
+				"navigationBarTitleText": "工程工单",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/pingtaiService/pingtaiDetail",
+			"style": {
+				"navigationBarTitleText": "平台供应详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/pingtaiService/pingtaiService",
+			"style": {
+				"navigationBarTitleText": "平台供应",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/smartFeedOlder/Relocation",
+			"style": {
+				"navigationBarTitleText": "打卡定位",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/smartFeedOlder/buyService",
+			"style": {
+				"navigationBarTitleText": "购买服务",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/smartFeedOlder/gotoSign",
+			"style": {
+				"navigationBarTitleText": "签到",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/smartFeedOlder/homeCare",
+			"style": {
+				"navigationBarTitleText": "居家照料",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/smartFeedOlder/medicalDetail",
+			"style": {
+				"navigationBarTitleText": "医疗卫生详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/smartFeedOlder/medicalTreatment",
+			"style": {
+				"navigationBarTitleText": "医疗卫生",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/smartFeedOlder/orderListDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/smartFeedOlder/serviceOrderList",
+			"style": {
+				"navigationBarTitleText": "服务工单",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/smartFeedOlder/signNotes",
+			"style": {
+				"navigationBarTitleText": "签到记录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/release/ordinarypost",
+			"style": {
+				"navigationBarTitleText": "普通帖子",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/release/otherpost",
+			"style": {
+				"navigationBarTitleText": "其他帖子",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/release/release",
+			"style": {
+				"navigationBarTitleText": "发布",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/release/releaseDetail",
+			"style": {
+				"navigationBarTitleText": "发布详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/release/releasemine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/actRelocation",
+			"style": {
+				"navigationBarTitleText": "活动打卡",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/activityDetail",
+			"style": {
+				"navigationBarTitleText": "活动详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/activitySign",
+			"style": {
+				"navigationBarTitleText": "活动签到",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/applyVolunteer",
+			"style": {
+				"navigationBarTitleText": "志愿者申请",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/baomingList",
+			"style": {
+				"navigationBarTitleText": "已报名志愿者",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/changeDataValue",
+			"style": {
+				"navigationBarTitleText": "修改资料",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/donatePoints",
+			"style": {
+				"navigationBarTitleText": "积分捐赠",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/findActivity",
+			"style": {
+				"navigationBarTitleText": "找活动",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/findOganization",
+			"style": {
+				"navigationBarTitleText": "组织",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/findOrgDetail",
+			"style": {
+				"navigationBarTitleText": "组织详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/gotoDonate",
+			"style": {
+				"navigationBarTitleText": "捐赠积分",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/integralMall",
+			"style": {
+				"navigationBarTitleText": "积分商城",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/leaveMessage",
+			"style": {
+				"navigationBarTitleText": "留言咨询",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/loveList",
+			"style": {
+				"navigationBarTitleText": "爱心榜",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/personalFiles",
+			"style": {
+				"navigationBarTitleText": "个人资料",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/searchActAndOrg",
+			"style": {
+				"navigationBarTitleText": "搜索",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/shenheStatus",
+			"style": {
+				"navigationBarTitleText": "志愿者申请",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/volenteerHisList",
+			"style": {
+				"navigationBarTitleText": "历史记录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/volunteerQunYuan/volunteerOrder",
+			"style": {
+				"navigationBarTitleText": "群众点单",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/votepublicity/votepublicity",
+			"style": {
+				"navigationBarTitleText": "投票公示",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/votepublicity/votepublicityDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/voterdisclosure/voterDetails",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/voterdisclosure/voterdisclosure",
+			"style": {
+				"navigationBarTitleText": "选民公示",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/voterdisclosure/voterdisclosureDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/voterregistration/gotoRegister",
+			"style": {
+				"navigationBarTitleText": "选民登记",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/voterregistration/myvoterregistDet",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/voterregistration/myvoterregistration",
+			"style": {
+				"navigationBarTitleText": "我的登记",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/voterregistration/voterRegistration",
+			"style": {
+				"navigationBarTitleText": "选民登记",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/voterregistration/voterregistrationDet",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/associateDetail/gotoVote",
+			"style": {
+				"navigationBarTitleText": "网格长推选",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/associateDetail/otherSheQunDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/associateDetail/wangGeDetail",
+			"style": {
+				"navigationBarTitleText": "网格信息",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/electionpublicity/electionpublicity",
+			"style": {
+				"navigationBarTitleText": "选举公示",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/electionpublicity/electionpublicityDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/gotoElect/gotoelect",
+			"style": {
+				"navigationBarTitleText": "去选举",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/service/gotoElect/gotoelectDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/shareUseWork",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/addUseWorkDengJi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/AddUseWorkProtocal",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/JiXiaoCheckPingJia",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/JiXiaoGoToPingJia",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/JiXiaoPingJiaList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/JiXiaoUserList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/myProtocalDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/sendworkCompany",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/talkUseWorkJieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/talkUseWorkList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/talkUseWorkTwoJieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/UseSendWorkDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/useworkCompany",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/useworkDengJi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/useworkMessageList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/UseWorkMyProtocal",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/shareUseWork/yuangongList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SendUsework/SendWorkRegister",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SendUsework/AddYuanGongMessage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SendUsework/yuangongMessageList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SendUsework/yuangongMessageDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SendUsework/protocalNotes",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SendUsework/SendWorkList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SendUsework/AddSendWorkGegister",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeWork",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/partTimeRegist",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/partTimeLaoWuList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/AddPartTimeRegist",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeLaoWuOaiQian",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/UseWorkProtocalDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeDaka",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeDaKaList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeBuKa",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeCheckPingJia",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeUseWorkPaiQian",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeRelocation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeGoPingJia",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeJieSuanOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/PartTimeWork/PartTimeLaoWuProtocal",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/SharePingTai",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/ShareUseWork",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/ShareSendWork",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/UseWorkDengJi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/PingTaiMessageList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/newUseWorkDengJi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/PingTaiShareUseSendOrderList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/PingTaiShareUseSendOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/useWorkProtocal",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/ProtocalOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/sendworkDengJi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/PingTtaiSendWorkMessageList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/NewSendWorkRegister",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/AddNewMember",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/MemberList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/NewAddMember",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/pingtaiMemberDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharePingTai/PingTaiJieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/AgentZhaoPin",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/AddZhaoPin",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/ZhaoPinManageMent",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/QiuZhiManageMent",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/ZhaoPinList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/AddQiuZhi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/ProtocalList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/ProtocalDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/AgentTalkUserList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/AgentTalkUserDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/AgentZhaoPin/AgentJieSuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/learnToStrongCountry/learnToStrongCountry",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/fragpage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/activityWithdraPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/AddAddressPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/AfterSalesRecordListPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/ApplyJieRuPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/ConfirmOrderPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/JieRuDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/myPrePayOrderPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/NormalWithdraPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/PrepaidWalletPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prepayDetailTitlePage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prepayRechargePage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prepayRechargeSelectProductPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prepayRechargeSelectShopPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prePayShopCartPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prePayShopHomePage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prepayShopList",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prepayUseDetailPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prepayWithdraHistoryPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/prepayWithdraPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/rechargeApplyBackPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/rechargeDetailPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/rechargeDetailTitlePage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/SelectAddressPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/shopProductDetailPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/UserShouHouDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/PrepaidWalletPage/XiaofeiMingxiListPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/normalShenPiDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/shenpiTransferDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/shenpiChosePerson",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/shenpiTransferMeDet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/companyInservice/shenpiMyTransferDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/wuyeEmergencyPiLiangSH",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/wuyePiLiangSHlistDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/wuyeEmergencyPiLiangConfirmSH",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/financialService/wuyeEmerGencyPiLiangConfirmDet",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/IdentifyHouse",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/home/newHome",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/serviceOrder/serviceOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/serviceOrder/serviceOrderPingJia",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/serviceOrder/serviceOrderShouHou",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/serviceOrder/serviceOrderJieRu",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/serviceOrder/serviceOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/WuYeOrder/wuyeOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/WuYeOrder/baoxiuOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/WuYeOrder/baoxiuOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/WuYeOrder/shouquanOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/WuYeOrder/waitingOrder",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/volunteerOrder/volunteerOrder",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/volunteerOrder/volunteerOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/cultureAndSport/cultureAndSportCenter",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/cultureAndSport/actDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/cultureAndSport/yuyueOrderList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/Volunteer/volunteerMainPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/Volunteer/volunteerRenLing",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/Volunteer/gongyiIntegral",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/Volunteer/gongyiActivity",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/Volunteer/joinedOrganization",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/Volunteer/myFootStep",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/Volunteer/myMessage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/Volunteer/rechargeNotes",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/Volunteer/volunteerSetting",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/MySignIn/MySignIn",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/MySignIn/myDengJi",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/MySignIn/personInformation",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/MySignIn/addNewPerson",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/MySignIn/noteList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/waipaiOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/MySignIn/messageRegister",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/MySignIn/messageRegistList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/shangquanFirstPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/yufuOrderList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/circleOrder/yufuOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/yufuSalebehind",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/circleOrder/yufuSalebehindDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/circleOrder/yuyueService",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/circleOrder/yuyueServiceDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/addTransfer",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/landTransfer",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/leaseAgreement",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/personalTransfer",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/transferHistory",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/serviceManagement/orderDetail",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/serviceManagement/publishService",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/serviceManagement/serviceDetail",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/mine/serviceManagement/serviceManagement",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+
+		{
+			"path": "pages/service/emergency/emergency",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+
+		{
+			"path": "pages/mine/setting/WebAgreementPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+
+		{
+			"path": "pages/mine/ShangQuanManagement/OrderManageMent",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/OrderManageMentDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/saleAfterOrderDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+
+		{
+			"path": "pages/mine/ShangQuanManagement/ProductManagePage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/PreProductManagePage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+
+		{
+			"path": "pages/mine/ShangQuanManagement/productTypeManage",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/addProductType",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/deleteProductType",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/StoreInformation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/pictrueShowPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/storeProtocal",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/authManageMent",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/storeGetAuth",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/newpage/workOrders",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/newpage/workerOrderWaitInfo",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/newpage/workerOrderInfo",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/LingGongOrder/SharelaoWu/newpage/workerOrderComplete",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendSaleHistory",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/HouseRentDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/HouseSaleDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendBussinessHouseDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendSaleBussinessHouseDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendHouseType",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/HouseList",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendHouseFirst",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendRentFirst",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendRentHeFirst",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendRentSecond",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendSaleSecond",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendSaleBussinessHouseFirst",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendRentBussinessHouseFirst",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendSaleBussinessHouseSecond",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/houserentsale/SendRentBussinessHouseSecond",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+
+		},
+		{
+			"path": "pages/mine/gongchenggongdan/repairHistoryList",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/mine/gongchenggongdan/repairPendingDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/gongchenggongdan/repairProcessingDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/gongchenggongdan/repairCompleteDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/yingjihistory/emergencyHistoryList",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/mine/yingjihistory/emergencyPendingDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/yingjihistory/emergencyProcessingDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/yingjihistory/emergencyCompleteDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/yingjihistory/AppealWorkOrder",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/yingjihistory/EmergencyEvaluate",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/scenes/chat/conversationList/conversationList",
+			"style": {
+				"navigationStyle": "custom",
+				"backgroundColor": "#f5f5f5"
+			}
+		},
+		{
+			"path": "uni_modules/tuikit-atomic-x/pages/call",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/scenes/chat/chat/index",
+			"style": {
+				"navigationStyle": "custom",
+				"backgroundColor": "#f5f5f5",
+				"app-plus": {
+					"titleNView": false
+				}
+
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/transAndRentDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/companyInfoInShenhe",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/conpanySetUpMessage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/addCompanyInfomation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/landTransfer/MyTiJiaoDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+
+		// {
+		//   "path": "pages/mine/HouseRentSale/HouseRentSale",
+		//   "style": {
+		// "enablePullDownRefresh": false
+		//   }
+		// },
+		// {
+		//   "path": "pages/mine/HouseRentSale/RentHouseRelease",
+		//   "style": {
+		// "enablePullDownRefresh": false
+		//   }
+		// },
+		{
+			"path": "pages/mine/ShangQuanManagement/customerDisscuss",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/youhuiquanList",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/addYouHuiQuan",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/youhuiquanDetail",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+
+		{
+			"path": "pages/service/BussinessCircle/BussinessShopHomePage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		
+		{
+			"path": "pages/service/BussinessCircle/BussinessShopSelectShoptPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/bussinessaddress/BussinessAddAddressPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/bussinessaddress/BussinessSelectAddressPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessCollectShoptPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/receiveanddispatch/receiveanddispatch",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/receiveanddispatch/postgoods",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/receiveanddispatch/logisticsinformation",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessShopSelectProductPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/myHouse/doneuserAddAuth",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/myHouse/addSecondAuthAcount",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/myHouse/weituoRent",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/myHouse/weituoSaleOut",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessShopOrder",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessShopOrderDetailPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessAfterSalePage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessCouponPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessDiscountCouponPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/productShenHe",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/yufuStoreProtocal",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/yufuStoreShenQing",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/shopRenZheng",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/yufuStoreDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/productDescManagement",
+			"style": {}
+
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/addProductDesc",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/editProductPage",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/mine/wuyeBaoXiu/wuyeBaoXiu",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/mine/wuyeBaoXiu/baoxiuHistory",
+			"style": {}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/AddProductPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/SpecManagePage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/EditSpecPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/mine/ShangQuanManagement/ProductAttrPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessEvaPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/OrderInterveShowPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/ApplyJieruPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/applyshouhou",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		
+		{
+			"path": "pages/service/BussinessCircle/BussinessProductEvaListPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/WebViewPage/WebPayPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/WebViewPage/WebViewPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessYugouConfirmOrderPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessShopCartPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessShopProductDetailPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/service/BussinessCircle/BussinessShopConfirmOrderPage",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		
+	  {
+		"path": "pages/service/shunfengCar/shunfengShouFa",
+		"style": { 
+			"enablePullDownRefresh": false
+		}
+	  
+	  },
+	  {
+		"path": "pages/service/shunfengCar/alreadyShenHe",
+		"style": { 
+			"enablePullDownRefresh": false
+		}
+	  
+	  },
+	  {
+		"path": "pages/service/shunfengCar/shenheDetail",
+		"style": { 
+			"enablePullDownRefresh": false
+		}
+	  
+	  },
+	  {
+		"path": "pages/service/shunfengCar/editShenheDetail",
+		"style": { 
+			"enablePullDownRefresh": false
+		}
+	  
+	  },
+	  {
+		"path": "pages/service/shunfengCar/carAuthPage",
+		"style": { 
+			"enablePullDownRefresh": false
+		}
+	  
+	  },
+	  {
+		"path": "pages/service/shunfengCar/addNewAuth",
+		"style": { 
+			"enablePullDownRefresh": false
+		}
+	  
+	  },
+	  {
+		"path": "pages/service/shunfengCar/myTexiOrderList",
+		"style": { 
+		}
+	  
+	  },
+	  {
+		"path": "pages/service/shunfengCar/shunfengOrderDetail",
+		"style": { 
+			"enablePullDownRefresh": false
+		}
+	  }
+	  ,
+	  {
+	  		"path": "pages/service/shunfengCar/goyueCar",
+	  		"style": { 
+	  			"enablePullDownRefresh": false
+	  		}
+	  
+	  },
+	  {
+	  		"path": "pages/service/shunfengCar/carStatusPage",
+	  		"style": { 
+	  			"enablePullDownRefresh": false
+	  		}
+	  
+	  },
+	  {
+	  		"path": "pages/service/shunfengCar/carStatusDetail",
+	  		"style": { 
+	  			"enablePullDownRefresh": false
+	  		}
+	  
+	  },
+	  {
+	  		"path": "pages/mine/ShangQuanManagement/AddPreProductPage",
+	  		"style": { 
+	  			"enablePullDownRefresh": false
+	  		}
+	},
+	{
+		"path": "pages/service/BussinessCircle/CouponGoodsListPage",
+		"style": {
+			"navigationBarTitleText": ""
+		}
+	},
+	{
+		"path": "pages/service/BussinessCircle/BussinessOrderSelectCouponPage",
+		"style": {
+			"navigationBarTitleText": ""
+		}
+	}
+
+],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "首页",
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#efefef",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "light",
+    "onReachBottomDistance": 50
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  }
+}
+

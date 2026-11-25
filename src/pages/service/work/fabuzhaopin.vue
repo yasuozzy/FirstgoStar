@@ -1,0 +1,910 @@
+<template>
+	<view class="main">
+		<u-navbar title="发布招聘信息" @rightClick="rightClick" :safeAreaInsetTop="true" :placeholder="true" :fixed="true"
+			:border="false" :bgColor="bgColor" titleStyle="color: #fff;">
+			<template #left>
+<view class="u-nav-slot" >
+				<view class="flex">
+					<u-icon name="arrow-left" size="20" color="#fff" @click="goBack"></u-icon>
+				</view>
+			</view>
+</template>
+		</u-navbar>
+		<view style="width: 100%;height: 10px;background-color: aliceblue;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;">
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">公司名称</view>
+			<input class="searchlocation" v-model="company" placeholder="请填写" type="text" />
+		</view>
+		<view style="width: 100%;height: 1px;background-color: lightgray;margin-top: 10px;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;">
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">公司地址</view>
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;width: 250px;" @click="choseLocation()">
+				{{ work_location }}</view>
+			<u-image style="margin-top: 13px;" :src="downImage" width="15px" height="8px"></u-image>
+		</view>
+		<view style="width: 100%;height: 1px;background-color: lightgray;margin-top: 10px;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;" @click="chooseOrderType">
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">选择工种</view>
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;width: 250px;">{{ gongzhong }}</view>
+			<u-image style="margin-top: 13px;" :src="downImage" width="15px" height="8px"></u-image>
+		</view>
+		<view style="width: 100%;height: 1px;background-color: lightgray;margin-top: 10px;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;">
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">所需人数</view>
+			<input class="searchlocation" v-model="work_num" placeholder="请填写" type="text" />
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">人</view>
+		</view>
+		<view style="width: 100%;height: 1px;background-color: lightgray;margin-top: 10px;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;">
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">所需时间</view>
+			<input class="typelocation" v-model="work_time" placeholder="请填写" type="text" />
+			<view class="typeView" @click="changeTYpe()">{{ timetype }}</view>
+		</view>
+		<view style="width: 100%;height: 1px;background-color: lightgray;margin-top: 10px;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;">
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">薪资情况</view>
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;width: 200px;" @click="choseSalary()">
+				{{ salary }}</view>
+		</view>
+		<view style="width: 100%;height: 1px;background-color: lightgray;margin-top: 10px;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;">
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">结算方式</view>
+			<input class="searchlocation" v-model="pay_method" placeholder="请填写" type="text" />
+		</view>
+		<view style="width: 100%;height: 1px;background-color: lightgray;margin-top: 10px;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;">
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">联系人</view>
+			<input class="searchlocation" v-model="name" placeholder="请填写" type="text" />
+		</view>
+		<view style="width: 100%;height: 1px;background-color: lightgray;margin-top: 10px;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;">
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">联系电话</view>
+			<input class="searchlocation" v-model="mobile" placeholder="请填写" type="text" />
+		</view>
+		<view style="width: 100%;height: 10px;background-color: aliceblue;margin-top: 10px;"></view>
+		<view style="display: flex;flex-direction: row;width: 100%;">
+			<view style="margin-top: 10px;margin-left: 15px;width: 6px;height: 20px;background-color: #2A9595;"></view>
+			<view style="margin-top: 10px;margin-left: 15px;font-size: 13px;">岗位要求</view>
+		</view>
+		<view style="width: 100%;height: 1px;background-color: lightgray;margin-top: 10px;"></view>
+		<textarea v-model="work_request" class="textAreaView"></textarea>
+		<view style="display: flex;flex-direction: row;width: 100%;margin-top: 10px;">
+			<view style="font-size: 13px;color: red;margin-top: 15px;margin-left: 15px;">*</view>
+			<view style="margin-top: 10px;margin-left: 5px;font-size: 13px;">上传企业营业执照</view>
+		</view>
+		<view style="display: flex;flex-direction: row;width: 100%;margin-top: 10px;">
+			<view style="font-size: 13px;color: red;margin-top: 15px;margin-left: 15px;">*</view>
+			<view style="margin-top: 12px;margin-left: 5px;font-size: 13px;">营业执照编号</view>
+			<input class="searchlocation" v-model="business_no" placeholder="请填写营业执照编号" type="text" />
+		</view>
+		<view style="width: 92%;height: 1px;background-color: lightgray;margin-top: 10px;margin-left: 4%;"></view>
+		<view style="display: flex;flex-direction: row;padding-top: 4px;padding-bottom: 4px;">
+			<view style="margin-left: 12px;margin-right: 25px; margin-top: 15px;">用工时间</view>
+			<text @click="show = true" style="flex:1; margin-top: 15px;">{{ business_time || '请选择' }}</text>
+			<image style="margin-left: 15px;margin-top: 15px;width: 15px;height: 15px;" v-if="longselected === false"
+				src="/static/login/choose_unselect.png" @click="longtime()"></image>
+			<image style="margin-left: 15px;margin-top: 15px;width: 15px;height: 15px;" v-else
+				src="/static/login/choose_select.png" @click="longtime()"></image>
+			<view style="font-size: 13px;color: dimgray;margin-top: 13px;margin-left: 10px;">长期有效</view>
+		</view>
+		<u-datetime-picker :show="show" v-model="currentTimeValue" mode="date" @confirm="onDateConfirm"
+			@cancel="show = false"></u-datetime-picker>
+		<view style="width: 100%;height: 200px;margin-top: 20px;">
+			<view class="imagechooseView">
+				<uni-file-picker v-model="imageValue" file-mediatype="image" mode="grid" file-extname="png,jpg"
+					:image-styles="yingyeImageStyles" @progress="progress" @success="success" @fail="fail"
+					@select="yingyeselect" limit="1">
+					<view style="margin-top: 10px;height: 180px;width: 150px;">
+						<image style="width: 150px;height: 180px;" :src="yingyelicense"></image>
+					</view>
+				</uni-file-picker>
+			</view>
+		</view>
+		<view style="width: 100%;height: 10px;background-color: aliceblue;margin-top: 10px;"></view>
+		<view class="protocalView">
+			<image style="margin-left: 15px;margin-top: 15px;width: 15px;height: 15px;" v-if="selected === false"
+				src="/static/login/choose_unselect.png" @click="chooseselect"></image>
+			<image style="margin-left: 15px;margin-top: 15px;width: 15px;height: 15px;" v-else
+				src="/static/login/choose_select.png" @click="chooseselect"></image>
+			<view style="font-size: 12px;color: dimgray;margin-top: 13px;margin-left: 10px;">已阅读并同意</view>
+			<view style="font-size: 12px;color: royalblue;margin-top: 13px;" @click="agreementClick()">
+				《{{ agreement_name }}》</view>
+		</view>
+		<view class="buttonView" @click="tijiaoClick()">发 布</view>
+		<uni-popup ref="popup">
+			<view class="WhiteView">
+				<view
+					style="display: flex;flex-direction: column;width: 115px;height: 230px;background-color: aliceblue;overflow-y: auto;">
+					<view style="display: flex;flex-direction: column;" v-for="(item, index) in dataList" :key="index">
+						<view style="margin-top: 11px;margin-left: 10px;font-size: 13px;height: 30px;"
+							@click="choseChildrenClick(item)">{{ item.name }} ></view>
+					</view>
+				</view>
+				<view style="display: flex;flex-direction: column;width: 115px;height: 230px;overflow-y: auto;">
+					<view style="display: flex;flex-direction: column;" v-for="(item, index) in childList" :key="index">
+						<view style="margin-top: 11px;margin-left: 10px;font-size: 13px;height: 30px;"
+							@click="normalClick(item)">{{ item.name }}</view>
+					</view>
+				</view>
+			</view>
+		</uni-popup>
+		<uni-popup ref="alertDialog">
+			<view v-if="salaryTitle === '薪金'" class="salaryView">
+				<view style="display: flex;flex-direction: column;width: 200px;">
+					<view style="margin-top: 10px;margin-left: 70px;font-size: 14px;text-align: center;">{{ salaryTitle
+					}}
+					</view>
+					<input class="searchsalary" v-model="xinjin" placeholder="请输入" type="text" />
+					<view style="margin-left: 100px;margin-top: 10px;height: 1px;width: 80px;background-color: black;">
+					</view>
+					<view class="sureBtn" @click="sureClick()">确定</view>
+				</view>
+				<picker-view v-if="visible" :indicator-style="indicatorStyle" :value="value" @change="bindChange"
+					class="picker-view">
+					<picker-view-column>
+						<view class="item" v-for="(item, index) in array" :key="index">{{ item }}</view>
+					</picker-view-column>
+				</picker-view>
+			</view>
+			<view v-if="salaryTitle === '区间'" class="salaryView">
+				<view style="display: flex;flex-direction: column;width: 200px;">
+					<view style="margin-top: 10px;margin-left: 70px;font-size: 14px;text-align: center;">{{ salaryTitle
+					}}
+					</view>
+					<view style="display: flex;flex-direction: row;">
+						<input class="startsalary" v-model="startxinjin" placeholder="请输入" type="text" />
+						<view
+							style="margin-left: 10px;margin-top: 20px;height: 1px;width: 20px;background-color: black;">
+						</view>
+						<input class="endsalary" v-model="endxinjin" placeholder="请输入" type="text" />
+					</view>
+					<view style="display: flex;flex-direction: row;">
+						<view
+							style="margin-left: 30px;margin-top: 10px;height: 1px;width: 60px;background-color: black;">
+						</view>
+						<view
+							style="margin-left: 30px;margin-top: 10px;height: 1px;width: 60px;background-color: black;">
+						</view>
+					</view>
+					<view class="sureBtn" @click="sureClick()">确定</view>
+				</view>
+				<picker-view v-if="visible" :indicator-style="indicatorStyle" :value="value" @change="bindChange"
+					class="picker-view">
+					<picker-view-column>
+						<view class="item" v-for="(item, index) in array" :key="index">{{ item }}</view>
+					</picker-view-column>
+				</picker-view>
+			</view>
+		</uni-popup>
+	</view>
+</template>
+
+<script setup lang="ts">
+import { GetAgreemente, MineJiuYeQunShareUseWorkCompanygetWorkKind, MineJiuYeQunMediumQiuZhiDataZhiSetUpData, MineJiuYeQunMediumQiuZhiDataZhiDetailDataInfo, MineJiuYeQunMediumQiuZhiDataZhiDetailEditInfo } from '@/api/mine.ts';
+
+import { storage, BaseURL } from '@/utils/storage';
+
+import { getCurrentInstance, onMounted, ref } from "vue";
+
+import { onLoad } from "@dcloudio/uni-app";
+
+const proxy = getCurrentInstance()?.proxy as any;
+
+const currentTimeValue = ref(Number(new Date()));
+
+const show = ref(false);
+
+const showyonggongshijian = ref(false);
+
+const yonggongshijian = ref('');
+
+const bgColor = ref("#2A9595");
+
+const myImage = ref('/static/service/myIconImage.png');
+
+const gongzhong = ref('请选择');
+
+const downImage = ref('/static/home/downImage.png');
+
+const timetype = ref('天');
+
+const salaryLegacy1 = ref('请选择');
+
+const agreement_name = ref('');
+
+const selected = ref(false);
+
+const company = ref('');
+
+const work_location = ref('请选择');
+
+const typeList = ref(['年', '月', '天', '小时', '长期', '面议']);
+
+const dataList = ref([]);
+
+const childList = ref([]);
+
+const firstyType = ref('');
+
+const secondType = ref('');
+
+const type_id = ref('');
+
+const work_kind = ref('');
+
+const work_type = ref('');
+
+const work_num = ref('');
+
+const work_time = ref('');
+
+const salarytypeList = ref(['薪金', '区间', '面议']);
+
+const salaryTitle = ref('');
+
+const startMoney = ref('');
+
+const array = ref(['元/天', '元/月', '元/小时']);
+
+const visible = ref(true);
+
+const xinjin = ref('');
+
+const startxinjin = ref('');
+
+const endxinjin = ref('');
+
+const xinjinType = ref('');
+
+const salary = ref('请选择');
+
+const pay_method = ref('');
+
+const name = ref('');
+
+const mobile = ref('');
+
+const work_request = ref('');
+
+const business_no = ref('');
+
+const business_time = ref('请选择截止日期');
+
+const longselectedLegacy1 = ref(false);
+
+const yingyelicense = ref('/static/mine/yingyelicense.png');
+
+const yingyeImageStyles = ref({
+				width: 150,
+				height: 180,
+				border: {
+					color: "lightgray",
+					width: 2,
+					style: 'dashed',
+					radius: '2px'
+				}
+			});
+
+const yingyetempFilePaths = ref([]);
+
+const yingyePicUrl = ref('');
+
+const idstring = ref('');
+
+const value1 = ref(Number(new Date()));
+
+const longselected = ref(false);
+
+const send_num = ref("");
+
+const work = ref<any>();
+
+const onDateConfirm = (e) => {
+  const date = new Date(e.value);
+    business_time.value = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+    show.value = false;
+};
+
+const handleConfirm = (e) => {
+  const date = new Date(e.value);
+    business_time.value = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+    show.value = false;
+};
+
+const init = () => {
+  try {
+      let param = {
+        type: 1
+      };
+      MineJiuYeQunShareUseWorkCompanygetWorkKind(param).then(res => {
+        console.log(res);
+        dataList.value = res.result;
+        childList.value = res.result[0].childList;
+        firstyType.value = dataList.value[0].name;
+        work_kind.value = dataList.value[0].name;
+      });
+    } catch (error) {
+      console.log(error);
+    }
+};
+
+const getAgreement = () => {
+  try {
+      let param = {
+        type: '19'
+      };
+      GetAgreemente(param).then(res => {
+        console.log(res);
+        agreement_name.value = res.result.agreement_name;
+      });
+    } catch (error) {
+      console.log(error);
+    }
+};
+
+const EditInfo = () => {
+  try {
+      let param = {
+        id: idstring.value
+      };
+      MineJiuYeQunMediumQiuZhiDataZhiDetailDataInfo(param).then(res => {
+        console.log(res);
+        company.value = res.result.company;
+        work_location.value = res.result.work_location;
+        const str = res.result.work_num;
+        const number = str.replace('人', ''); // "34"
+        const unit = "人";
+        const numValue = parseInt(number); // 34
+        work_num.value = numValue;
+        name.value = res.result.name;
+        mobile.value = res.result.mobile;
+        work_kind.value = res.result.work_kind;
+        work_type.value = res.result.work_type;
+        gongzhong.value = work_kind.value + work.value;
+        work_time.value = res.result.work_time;
+        salary.value = res.result.salary;
+        business_no.value = res.result.business_no;
+        pay_method.value = res.result.pay_method;
+        business_time.value = res.result.business_time;
+        if (business_time.value === '长期有效') {
+          longselected.value = true;
+        } else {
+          longselected.value = false;
+        }
+        yingyePicUrl.value = res.result.business_path;
+      });
+    } catch (error) {
+      console.log(error);
+    }
+};
+
+const changeTYpe = () => {
+  uni.showActionSheet({
+      itemList: typeList.value,
+      success: res => {
+        // console.log('选中了第' + (res.tapIndex + 1) + '个按钮')
+        // console.log(this.itemList[res.tapIndex])
+        timetype.value = typeList.value[res.tapIndex];
+        if (timetype.value === '长期' || timetype.value === '面议') {
+          work_time.value = timetype.value;
+        } else {
+          work_time.value = work_time.value + timetype.value;
+        }
+      },
+      fail: res => {
+        console.log(res.errMsg);
+      }
+    });
+};
+
+const agreementClick = () => {
+  uni.navigateTo({
+      url: '/pages/service/HouseInformation/ProtocalDetail?type=' + '19'
+    });
+};
+
+const yingyeselect = (e) => {
+  console.log('选择文件：', e);
+    yingyetempFilePaths.value = e.tempFilePaths;
+    if (yingyetempFilePaths.value.length > 0) {
+      console.log(yingyetempFilePaths.value);
+      uni.uploadFile({
+        url: BaseURL + 'AppWorkOrder/addUploadIms',
+        filePath: yingyetempFilePaths.value[0],
+        name: 'multipartFile',
+        formData: {
+          type: "jpg"
+        },
+        success: uploadFileRes => {
+          console.log(uploadFileRes.data);
+          const responseData = JSON.parse(uploadFileRes.data);
+          console.log(responseData);
+          uni.showToast({
+            title: '上传成功',
+            icon: 'none'
+          });
+          yingyePicUrl.value = responseData.data;
+        }
+      });
+    }
+};
+
+const tijiaoClick = () => {
+  if (company.value.length == 0) {
+      uni.showToast({
+        title: '请填写公司名称',
+        icon: 'none'
+      });
+      return;
+    }
+    if (work_location.value.length == 0) {
+      uni.showToast({
+        title: '请填写公司地址',
+        icon: 'none'
+      });
+      return;
+    }
+    if (work_kind.value.length == 0) {
+      uni.showToast({
+        title: '请选择用工类别',
+        icon: 'none'
+      });
+      return;
+    }
+    if (work_type.value.length == 0) {
+      uni.showToast({
+        title: '请选择用工工种',
+        icon: 'none'
+      });
+      return;
+    }
+    if (work_num.value.length == 0) {
+      uni.showToast({
+        title: '请填写所需人数',
+        icon: 'none'
+      });
+      return;
+    }
+    if (work_time.value.length == 0) {
+      uni.showToast({
+        title: '请填写所需时间',
+        icon: 'none'
+      });
+      return;
+    }
+    if (salary.value.length == 0) {
+      uni.showToast({
+        title: '请填写薪资',
+        icon: 'none'
+      });
+      return;
+    }
+    if (pay_method.value.length == 0) {
+      uni.showToast({
+        title: '请填写结算方式',
+        icon: 'none'
+      });
+      return;
+    }
+    if (name.value.length == 0) {
+      uni.showToast({
+        title: '请填写联系人姓名',
+        icon: 'none'
+      });
+      return;
+    }
+    if (mobile.value.length == 0) {
+      uni.showToast({
+        title: '请填写联系人电话',
+        icon: 'none'
+      });
+      return;
+    }
+    if (work_request.value.length == 0) {
+      uni.showToast({
+        title: '请填写岗位要求',
+        icon: 'none'
+      });
+      return;
+    }
+    if (business_no.value.length == 0) {
+      uni.showToast({
+        title: '请填写营业执照编号',
+        icon: 'none'
+      });
+      return;
+    }
+    if (business_time.value === '请选择截止日期') {
+      uni.showToast({
+        title: '请选择截止日期',
+        icon: 'none'
+      });
+      return;
+    }
+    if (yingyePicUrl.value.length == 0) {
+      uni.showToast({
+        title: '请选择营业执照',
+        icon: 'none'
+      });
+      return;
+    }
+    if (selected.value == false) {
+      uni.showToast({
+        title: '请同意劳务协议',
+        icon: 'none'
+      });
+      return;
+    }
+    if (idstring.value) {
+      try {
+        let param = {
+          userId: storage.getUserId(),
+          id: idstring.value,
+          company: company.value,
+          work_location: work_location.value,
+          work_kind: work_kind.value,
+          work_type: work_type.value,
+          work_num: work_num.value + '人',
+          work_time: work_time.value,
+          salary: salary.value,
+          pay_method: pay_method.value,
+          name: name.value,
+          mobile: mobile.value,
+          work_request: work_request.value,
+          business_no: business_no.value,
+          business_time: business_time.value,
+          business_path: yingyePicUrl.value
+        };
+        MineJiuYeQunMediumQiuZhiDataZhiDetailEditInfo(param).then(res => {
+          console.log(res);
+          uni.navigateBack();
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      try {
+        let param = {
+          userId: storage.getUserId(),
+          company: company.value,
+          work_location: work_location.value,
+          work_kind: work_kind.value,
+          work_type: work_type.value,
+          work_num: work_num.value + '人',
+          work_time: work_time.value,
+          salary: salary.value,
+          pay_method: pay_method.value,
+          name: name.value,
+          mobile: mobile.value,
+          work_request: work_request.value,
+          business_no: business_no.value,
+          business_time: business_time.value,
+          business_path: yingyePicUrl.value
+        };
+        MineJiuYeQunMediumQiuZhiDataZhiSetUpData(param).then(res => {
+          console.log(res);
+          uni.navigateBack();
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+};
+
+const chooseselect = () => {
+  selected.value = !selected.value;
+};
+
+const longtime = () => {
+  longselected.value = !longselected.value;
+    if (longselected.value) {
+      business_time.value = '长期有效';
+    } else {
+      business_time.value = '';
+    }
+};
+
+const choseChildrenClick = (item) => {
+  console.log(item.name);
+    firstyType.value = item.name;
+    work_kind.value = item.name;
+    childList.value = item.childList;
+};
+
+const chooseOrderType = () => {
+  proxy.$refs.popup.open('top');
+};
+
+const normalClick = (item) => {
+  console.log(item.name);
+    secondType.value = item.name;
+    work_type.value = item.name;
+    type_id.value = item.id;
+    gongzhong.value = firstyType.value + secondType.value;
+    proxy.$refs.popup.close();
+};
+
+const choseSalary = () => {
+  const that = proxy;
+    uni.showActionSheet({
+      itemList: salarytypeList.value,
+      success: res => {
+        // console.log('选中了第' + (res.tapIndex + 1) + '个按钮')
+        // console.log(this.itemList[res.tapIndex])
+        const titles = salarytypeList.value[res.tapIndex];
+        //需要根据选择，弹出不同输入框以及确定按键
+        if (titles === '薪金') {
+          salaryTitle.value = titles;
+          xinjinType.value = array.value[0];
+          proxy.$refs.alertDialog.open();
+        } else if (titles === '区间') {
+          salaryTitle.value = titles;
+          xinjinType.value = array.value[0];
+          proxy.$refs.alertDialog.open();
+        } else if (titles === '面议') {
+          that.salary = '面议';
+        }
+      },
+      fail: res => {
+        console.log(res.errMsg);
+      }
+    });
+};
+
+const sureClick = () => {
+  if (salaryTitle.value === '薪金') {
+      if (xinjin.value.length == 0) {
+        uni.showToast({
+          title: '请输入薪金金额',
+          icon: 'none'
+        });
+        return;
+      }
+      salary.value = xinjin.value + xinjinType.value;
+      proxy.$refs.alertDialog.close();
+    } else if (salaryTitle.value === '区间') {
+      if (startxinjin.value.length == 0 || endxinjin.value.length == 0) {
+        uni.showToast({
+          title: '请填写薪金完整区间',
+          icon: 'none'
+        });
+        return;
+      }
+      salary.value = startxinjin.value + '-' + endxinjin.value + xinjinType.value;
+      proxy.$refs.alertDialog.close();
+    }
+};
+
+const choseLocation = () => {
+  const that = proxy;
+    uni.chooseLocation({
+      success: function (res) {
+        console.log('位置名称：' + res.name);
+        console.log('详细地址：' + res.address);
+        console.log('纬度：' + res.latitude);
+        console.log('经度：' + res.longitude);
+        that.work_location = res.address;
+        that.latitude = res.latitude;
+        that.longitude = res.longitude;
+        console.log(that.chooseLocation);
+      },
+      fail() {
+        uni.showToast({
+          title: '获取位置信息失败',
+          icon: 'none'
+        });
+      }
+    });
+};
+
+const goBack = () => {
+  uni.navigateBack();
+};
+
+onLoad((options) => {
+  if (options.id) {
+      idstring.value = options.id;
+      EditInfo();
+    }
+});
+
+onMounted(() => {
+  init();
+    getAgreement();
+});
+</script>
+
+<style lang="scss" scoped>
+.main {
+	height: 100%;
+	background: white;
+
+	.flex {
+		display: flex;
+	}
+
+	.homestayView {
+		width: 100px;
+		height: 30px;
+		color: white;
+		margin-right: 10px;
+		margin-top: 11px;
+		text-align: right;
+		font-size: 13px;
+	}
+
+	.searchlocation {
+		margin-left: 15px;
+		width: 230px;
+		height: 25px;
+		margin-top: 7px;
+
+		border-radius: 5px;
+		font-size: 13px;
+	}
+
+	.typelocation {
+		margin-left: 15px;
+		width: 230px;
+		height: 25px;
+		margin-top: 7px;
+
+		border-radius: 5px;
+		font-size: 13px;
+	}
+
+	.textAreaView {
+		margin-top: 10px;
+		margin-left: 4%;
+		width: 92%;
+		height: 150px;
+		border: lightgray 1px solid;
+		font-size: 13px;
+		border-radius: 4px;
+	}
+
+	.protocalView {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.buttonView {
+
+		margin-top: 30px;
+		background-color: #2A9595;
+		border-radius: 5px;
+		color: white;
+		font-size: 14px;
+		margin-left: 5%;
+		display: flex;
+		justify-content: center;
+		/* 水平居中 */
+		align-items: center;
+		/* 垂直居中 */
+		height: 40px;
+		/* 需要设置高度 */
+		width: 90%;
+		/* 需要设置宽度 */
+	}
+
+	.typeView {
+
+		margin-top: 10px;
+		margin-left: 15px;
+		font-size: 13px;
+		background-color: aliceblue;
+		width: 40px;
+		height: 25px;
+		text-align: center;
+	}
+
+	.WhiteView {
+		background-color: white;
+		margin-top: calc(var(--status-bar-height) + 95px);
+		margin-left: 140px;
+		margin-right: 5px;
+		width: 230px;
+		height: 230px;
+		display: flex;
+		flex-direction: row;
+		border-radius: 4px;
+	}
+
+	.searchsalary {
+		margin-left: 100px;
+		width: 80px;
+		height: 25px;
+		margin-top: 10px;
+		// background-color: #2A9595;
+		border-radius: 5px;
+		font-size: 13px;
+	}
+
+	.salaryView {
+
+		background-color: white;
+		align-items: right;
+		margin-left: 30px;
+		width: 300px;
+		height: 140px;
+		display: flex;
+		flex-direction: row;
+		border-radius: 10px;
+	}
+
+	.picker-view {
+		width: 120rpx;
+		height: 150rpx;
+		margin-top: 20rpx;
+	}
+
+	.item {
+		line-height: 80rpx;
+		text-align: center;
+		font-size: 13px;
+	}
+
+	.sureBtn {
+		margin-top: 15px;
+		margin-left: 100px;
+		width: 80px;
+		text-align: center;
+		background-color: aliceblue;
+		color: black;
+		border-radius: 5px;
+		height: 30px;
+		font-size: 14px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.startsalary {
+		margin-left: 30px;
+		width: 60px;
+		height: 25px;
+		margin-top: 10px;
+		// background-color: #2A9595;
+		border-radius: 5px;
+		font-size: 13px;
+	}
+
+	.endsalary {
+		margin-left: 10px;
+		width: 60px;
+		height: 25px;
+		margin-top: 10px;
+		// background-color: #2A9595;
+		border-radius: 5px;
+		font-size: 13px;
+	}
+
+	.imagechooseView {
+		margin-top: 10px;
+		margin-left: 120px;
+		width: 150;
+		height: 180px;
+	}
+
+	.personchooseView {
+		margin-top: 10px;
+		margin-left: 5%;
+		width: 90%;
+		height: 100px;
+	}
+
+	.custom-upload-btn {
+		width: 80px;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.custom-upload-btn image {
+		width: 100%;
+		height: 100%;
+	}
+}
+</style>

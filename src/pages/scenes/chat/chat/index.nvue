@@ -1,0 +1,265 @@
+﻿<template>
+  <view class="page-container">
+    <CustomNavbar
+      position="fixed"
+      :title="navigationTitle"
+      :showBack="true"
+      :showMenu="true"
+      @back="onNavBack"
+      @menuSelect="onNavMenuSelect"
+    />
+    
+    <view
+      class="message-list-container"
+      :style="{ paddingBottom: messageListPaddingBottom + 'px' }"
+      @tap="closeSoftKeyboard"
+    >
+      <MessageList
+        v-if="conversationID"
+        :conversationID="conversationID"
+        :locateMessage="locateMessage"
+        :inputToolbarHeight="inputToolbarHeight"
+        :inputPanelHeight="inputPanelHeight"
+        @onMessageListTap="closeSoftKeyboard"
+      />
+    </view>
+    
+    <MessageInput
+      v-if="conversationID"
+      ref="messageInputRef"
+      :style="messageInputStyle"
+      :conversationID="conversationID"
+      :setOfflinePushInfo="setOfflinePushInfo"
+      @height-change="onMessageInputHeightChange"
+    />
+    <view v-if="show" class="agreement-bar">
+      <view class="agreement-text">填写并提交</view>
+      <view class="agreement-link" @click="toagreement">《用工协议》</view>
+    </view>
+  </view>
+</template>
+
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import { onLoad, onShow } from '@dcloudio/uni-app'
+import MessageList from '@/uni_modules/tuikit-atomic-x/components/MessageList/MessageList.nvue'
+import MessageInput, { DEFAULT_TOOLS } from '@/uni_modules/tuikit-atomic-x/components/MessageInput/MessageInput.nvue'
+import CustomNavbar from '@/uni_modules/tuikit-atomic-x/components/CustomNavbar/CustomNavbar.nvue'
+import { useConversationListState } from '@/uni_modules/tuikit-atomic-x/state/ConversationListState'
+import { useContactState } from '@/uni_modules/tuikit-atomic-x/state/ContactState'
+import { useGroupState } from '@/uni_modules/tuikit-atomic-x/state/GroupState'
+import { useLoginState } from '@/uni_modules/tuikit-atomic-x/state/LoginState'
+import { MessageType } from '@/uni_modules/tuikit-atomic-x/types/message'
+import type { ContactInfo } from '@/uni_modules/tuikit-atomic-x/types/contact'
+import type { OfflinePushContext, OfflinePushInfo } from '@/uni_modules/tuikit-atomic-x/types/message'
+import voiceIcon from '@/uni_modules/tuikit-atomic-x/components/MessageList/assets/voice.png'
+import videoIcon from '@/uni_modules/tuikit-atomic-x/components/MessageList/assets/video.png'
+
+// ==================== State ====================
+const {
+  joinedGroupList,
+  loadJoinedGroups,
+} = useGroupState();
+const { loginUserInfo } = useLoginState();
+
+// ==================== 状态 ====================
+const conversationID = ref('')
+const locateMessage = ref(null)
+const isInGroup = ref(false)
+const messageInputRef = ref(null)
+const inputToolbarHeight = ref(0)
+const inputPanelHeight = ref(0)
+const agreementBarHeight = 40
+const show = ref(false)
+const type = ref(0)
+const peerUserInfo = ref<ContactInfo | null>(null)
+
+const { getConversationInfo, conversationList } = useConversationListState('chat')
+const { getContactInfo, friendList } = useContactState('MessageListState')
+
+// ==================== 计算属性 ====================
+const isC2CConversation = computed(() => conversationID.value.startsWith('c2c_'))
+const peerUserID = computed(() => (
+  isC2CConversation.value ? conversationID.value.replace('c2c_', '') : ''
+))
+
+const peerDisplayName = computed(() => {
+  const friendRemark = friendList.value.find(friend => friend.userID === peerUserID.value)?.friendRemark
+  return friendRemark
+    || peerUserInfo.value?.friendRemark
+    || peerUserInfo.value?.nickname
+    || ''
+})
+
+const currentConversation = computed(() => 
+  conversationList.value.find(conv => conv.conversationID === conversationID.value)
+)
+
+const navigationTitle = computed(() => {
+  if (isC2CConversation.value) {
+    return peerDisplayName.value
+      || currentConversation.value?.title
+      || peerUserID.value
+      || '聊天'
+  }
+  return currentConversation.value?.title || '聊天'
+})
+
+const messageListPaddingBottom = computed(() => (
+  inputToolbarHeight.value + (show.value ? agreementBarHeight : 0)
+))
+
+const messageInputStyle = computed(() => ({
+  bottom: `${(show.value ? agreementBarHeight : 0) - uni.upx2px(700)}px`
+}))
+
+// ==================== 导航栏 ====================
+const onNavBack = () => uni.navigateBack()
+
+const onNavMenuSelect = () => {
+  if (!isC2CConversation.value) {
+    isInGroup.value
+      = joinedGroupList.value.some(group => group.groupID === conversationID.value?.replace('group_', ''));
+    if (!isInGroup.value) {
+      uni.showToast({ title: '您已不在群内，无法进行此操作', icon: 'none' })
+      return;
+    }
+  }
+  uni.navigateTo({
+    url: `/pages/scenes/chat/chatSetting/index?conversationID=${conversationID.value}&showType=0`
+  });
+}
+
+// ==================== 输入框 ====================
+const onMessageInputHeightChange = ({ inputToolbarHeight: toolbar, inputPanelHeight: panel }) => {
+  inputToolbarHeight.value = toolbar
+  inputPanelHeight.value = panel
+}
+
+const closeSoftKeyboard = () => messageInputRef.value?.collapse()
+
+// ==================== 离线推送 ====================
+const setOfflinePushInfo = (ctx: OfflinePushContext): OfflinePushInfo | null => {
+  // 群组会话用群名；C2C 会话用当前登录用户的昵称（消息发送者本人），fallback userID
+  const title = isC2CConversation.value
+    ? (loginUserInfo.value?.nickname || loginUserInfo.value?.userID || '新消息')
+    : (currentConversation.value?.title || '新消息')
+  const conv = ctx.conversationID
+
+  let description = '[新消息]'
+  switch (ctx.messageType) {
+    case MessageType.TEXT:
+      description = (ctx.messagePayload as { text?: string })?.text || '[文本消息]'
+      break
+    case MessageType.IMAGE:
+      description = '[图片]'
+      break
+    case MessageType.VIDEO:
+      description = '[视频]'
+      break
+    case MessageType.AUDIO:
+      description = '[语音]'
+      break
+    case MessageType.FILE:
+      description = '[文件]'
+      break
+    case MessageType.CUSTOM:
+      return null
+    default:
+      return null
+  }
+
+  return {
+    title,
+    description,
+    extensionInfo: {
+      ext: JSON.stringify({
+        conversationID: conv,
+        messageType: ctx.messageType,
+      })
+    },
+  }
+}
+
+const fetchPeerUserInfo = async () => {
+  if (!peerUserID.value) return
+  try {
+    const list = await getContactInfo([peerUserID.value])
+    peerUserInfo.value = list?.[0] || null
+  } catch (error) {
+    console.error('[chat/index] fetchPeerUserInfo failed:', error)
+  }
+}
+
+const toagreement = () => {
+  uni.navigateTo({
+    url: `/pages/service/work/ChatAgreement${type.value}`
+  });
+}
+
+// ==================== 生命周期 ====================
+onLoad((options) => {
+  if (!options.conversationID) {
+    console.error('未接收到 conversationID 参数')
+    return
+  }
+  const showOption = String(options.show || '');
+  show.value = showOption === 'true' || showOption === '1';
+  type.value = Number(options.type) || 0;
+  conversationID.value = options.conversationID
+  getConversationInfo(conversationID.value);
+  fetchPeerUserInfo();
+  loadJoinedGroups();
+  
+  // 处理定位消息
+  if (uni.$locateMessage) {
+    locateMessage.value = uni.$locateMessage
+    uni.$locateMessage = null
+  }
+})
+
+onShow(() => {
+  if (!conversationID.value) {
+    return
+  }
+  getConversationInfo(conversationID.value)
+  fetchPeerUserInfo()
+})
+</script>
+
+<style>
+.page-container {
+  flex: 1;
+  flex-direction: column;
+  background-color: #F9FAFC;
+}
+
+.message-list-container {
+  flex: 1;
+  flex-direction: column;
+  background-color: #F9FAFC;
+}
+
+.agreement-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  flex-direction: row;
+  background-color: #ffffff;
+}
+
+.agreement-text {
+  font-size: 12px;
+  color: dimgray;
+  margin-top: 13px;
+  margin-left: 10px;
+}
+
+.agreement-link {
+  font-size: 12px;
+  color: #2a9598;
+  margin-top: 13px;
+}
+</style>

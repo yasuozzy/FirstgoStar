@@ -1,0 +1,25 @@
+{
+    "id": "x-native-uploader",
+    "name": "x-native-uploader 原生文件上传组件",
+    "displayName": "x-native-uploader 原生文件上传组件",
+    "version": "1.0.2",
+    "description": "跨平台的文件上传组件，专为解决 UniApp 在 App 端文件选择与上传的痛点而设计。它集成了 Native.js 的能力，支持在 Android 和 iOS 上调用原生文件选择器",
+    "keywords": [
+        "文件上传"
+    ],
+    "dcloudext": {
+        "type": "component-vue",
+        "sale": {
+            "regular": {
+                "price": "0.00"
+            },
+            "sourcecode": {
+                "price": "0.00"
+            }
+        }
+    },
+    "uni_modules": {
+        "dependencies": [],
+        "encrypt": []
+    }
+}

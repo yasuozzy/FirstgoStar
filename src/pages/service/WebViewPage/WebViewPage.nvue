@@ -1,0 +1,168 @@
+<template>
+  <view class="container">
+    <u-navbar
+      v-if="!isApp"
+      :title="title"
+      :safeAreaInsetTop="true"
+      :placeholder="true"
+      :fixed="true"
+      :border="false"
+      :bgColor="bgColor"
+      titleStyle="color: #fff;"
+      leftIconColor="#fff"
+    >
+      <template #left>
+        <view>
+          <view class="flex">
+            <u-icon name="arrow-left" size="20" color="#fff" @click="goBack"></u-icon>
+          </view>
+        </view>
+      </template>
+    </u-navbar>
+
+    <web-view
+      :src="weburl"
+      @message="handleMessage"
+      @onPostMessage="handlePostMessage"
+      class="web-view-container"
+    ></web-view>
+  </view>
+</template>
+
+<script setup>
+import { onLoad } from "@dcloudio/uni-app";
+import { ref } from "vue";
+import { getMyaccount, getMyWalletUrl } from "@/api/service";
+import { storage } from "@/utils/storage";
+
+const bgColor = ref("#2A9595");
+const weburl = ref("");
+const title = ref("");
+const type = ref("");
+const loading = ref(true);
+const isApp = ref(false);
+
+function goBack() {
+  uni.navigateBack();
+}
+
+function handleMessage(evt) {
+  console.log("收到H5消息:", evt.detail);
+}
+
+function handlePostMessage(data) {
+  console.log("PostMessage:", data);
+}
+
+function handleLoadError(msg) {
+  loading.value = false;
+  uni.showToast({
+    title: msg,
+    icon: "none"
+  });
+}
+
+function getWallet() {
+  const params = {
+    authorToken: storage.getToken(),
+    userType: storage.getCstType(),
+    mobile: storage.getPhone(),
+    formExt: "H5",
+    hostNo: storage.getHostNo()
+  };
+  getMyWalletUrl(params)
+    .then(res => {
+      console.log(res);
+      if (res.result) {
+        weburl.value = res.result;
+        loading.value = false;
+      } else {
+        handleLoadError("无法获取钱包地址");
+      }
+    })
+    .catch(() => {
+      handleLoadError("网络请求失败");
+    });
+}
+
+function getAccount() {
+  const params = {
+    mobile: storage.getPhone(),
+    hostNo: storage.getHostNo()
+  };
+  getMyaccount(params)
+    .then(res => {
+      if (res.result && res.result.walletUrl) {
+        weburl.value = res.result.walletUrl;
+        loading.value = false;
+      } else {
+        handleLoadError("无法获取账户地址");
+      }
+    })
+    .catch(() => {
+      handleLoadError("网络请求失败");
+    });
+}
+
+onLoad(e => {
+  // #ifdef APP-PLUS
+  isApp.value = true;
+  if (e.type === "wallet") {
+    title.value = "我的钱包";
+  } else if (e.type === "myaccount") {
+    title.value = "监管账户";
+  }
+  uni.setNavigationBarTitle({
+    title: title.value
+  });
+  // #endif
+
+  type.value = e.type;
+  loading.value = true;
+
+  if (type.value === "wallet") {
+    getWallet();
+  } else if (type.value === "myaccount") {
+    getAccount();
+  } else {
+    weburl.value = "https://www.uviewui.com/components/feature.html";
+    loading.value = false;
+  }
+});
+</script>
+
+<style lang="scss" scoped>
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.web-view-container {
+  flex: 1;
+}
+
+.loading-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+</style>
